@@ -1244,6 +1244,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize app
   checkAuthentication();
   initializeFilters();
-  fetchAnnouncements();
   fetchActivities();
 });
