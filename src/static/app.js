@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesList = document.getElementById("activities-list");
   const messageDiv = document.getElementById("message");
   const announcementText = document.getElementById("announcement-text");
+  const announcementBanner = document.getElementById("announcement-banner");
   const registrationModal = document.getElementById("registration-modal");
   const modalActivityName = document.getElementById("modal-activity-name");
   const signupForm = document.getElementById("signup-form");
@@ -293,7 +294,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updateText();
 
     if (activeAnnouncements.length > 1) {
+      announcementBanner.setAttribute("aria-live", "off");
       announcementRotationInterval = setInterval(updateText, 5000);
+    } else {
+      announcementBanner.setAttribute("aria-live", "polite");
     }
   }
 
