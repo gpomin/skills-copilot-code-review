@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .join("");
 
-    const editButtons = document.querySelectorAll(".edit-announcement");
-    const deleteButtons = document.querySelectorAll(".delete-announcement");
+    const editButtons = announcementList.querySelectorAll(".edit-announcement");
+    const deleteButtons = announcementList.querySelectorAll(".delete-announcement");
 
     editButtons.forEach((button) => {
       button.addEventListener("click", () => {
